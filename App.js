@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Login from './Login'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View style={styles.box}>
+      <Login/>
+      </View>
+      
       <StatusBar style="auto" />
     </View>
   );
@@ -17,4 +21,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  box: {
+    backgroundColor:'orange',
+    borderRadius:26,
+    height: 200,
+    width: 300
+  }
 });
