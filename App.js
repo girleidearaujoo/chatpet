@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    backgroundColor:'orange',
+    backgroundColor:'#F4A460',
     borderRadius:26,
     height: 200,
     width: 300
