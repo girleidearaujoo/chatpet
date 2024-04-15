@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column'
   },
   box: {
     backgroundColor:'#F4A460',

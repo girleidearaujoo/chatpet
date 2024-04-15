@@ -5,6 +5,7 @@ export default function Login(){
     <View style = {{
     justifyContent:"center", 
     flex:1,
+    padding:25
    }}>
     <View>
     <Text>Username: </Text>
@@ -16,8 +17,8 @@ export default function Login(){
     <TextInput style = {{borderWidth: 1, borderColor: "#FF8247" }}  placeholder = "Digite sua senha..." 
     placeholderTextColor = "#A0522D" secureTextEntry={true} />
     </View>
-    <View>
-    <Button title = "entrar" color={"#A0522D"}/>
+    <View style= {{padding:10}}>
+    <Button title = "entrar" color={"#A0522D"} />
     </View>
     </View>
   );
