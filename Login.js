@@ -8,16 +8,16 @@ export default function Login(){
     padding:25
    }}>
     <View>
-    <Text>Username: </Text>
-    <TextInput  style = {{borderWidth: 1, borderColor: "#FF8247" }} placeholder = "Digite seu usuário..." 
+    <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Username: </Text>
+    <TextInput  style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }} placeholder = "Digite seu usuário..." 
     placeholderTextColor = "#A0522D"/>
     </View>
     <View>
-    <Text>Password:</Text>
-    <TextInput style = {{borderWidth: 1, borderColor: "#FF8247" }}  placeholder = "Digite sua senha..." 
+    <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Password:</Text>
+    <TextInput style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }}  placeholder = "Digite sua senha..." 
     placeholderTextColor = "#A0522D" secureTextEntry={true} />
     </View>
-    <View style= {{padding:10}}>
+    <View style= {{padding:10, fontFamily:"KiwiMaru_400Regular"}}>
     <Button title = "entrar" color={"#A0522D"} />
     </View>
     </View>
