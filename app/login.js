@@ -1,15 +1,22 @@
 import {Button, Text, View, TextInput} from "react-native"
-import {auth} from './firebaseConfig';
+import {auth} from '../firebaseConfig';
 import {signInWithEmailAndPassword} from "firebase/auth"
-
+import { useState } from "react";
+import { useRouter } from "expo-router";
 
 export default function Login(){
+
+  const [Username, setUsername] = useState ('')
+  const [Password, setPassword] = useState ('')
+  const router = useRouter()
+
  const handleLogin = () => {
-  signInWithEmailAndPassword(auth, "ejsv1@aluno.ifal.edu.br", "246810")
+  signInWithEmailAndPassword(auth, Username, Password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
     console.log(user)
+    router.replace ('/home')
 
     // ...
   })
@@ -29,12 +36,12 @@ export default function Login(){
    }}>
     <View>
     <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Username: </Text>
-    <TextInput  style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }} placeholder = "Digite seu usuário..." 
+    <TextInput value = {Username} onChangeText = {setUsername} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }} placeholder = "Digite seu usuário..." 
     placeholderTextColor = "#A0522D"/>
     </View>
     <View>
     <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Password:</Text>
-    <TextInput style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }}  placeholder = "Digite sua senha..." 
+    <TextInput value = {Password} onChangeText = {setPassword} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }}  placeholder = "Digite sua senha..." 
     placeholderTextColor = "#A0522D" secureTextEntry={true} />
     </View>
     <View style= {{padding:10, fontFamily:"KiwiMaru_400Regular"}}>
