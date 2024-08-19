@@ -10,23 +10,21 @@ export default function Login(){
   const [Password, setPassword] = useState ('')
   const router = useRouter()
 
- const handleLogin = () => {
-  signInWithEmailAndPassword(auth, Username, Password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;;
-    console.log(user)
-    router.replace ('/home')
-    // ...
-    
-  })
-  .catch((error) => {
+  const handleLogin = async () => {
+  try {
+  const userCredential = await signInWithEmailAndPassword(auth, Username, Password)
+  // Signed in 
+  const user = userCredential.user;;
+  console.log(user)
+  router.replace ('/home')
+  
+  } catch (error){
     const errorCode = error.code;
     const errorMessage = error.message;
     console.error(errorCode)
     console.error(errorMessage)
-  });
- }
+  }}
+  
 
   return (
     <View style = {{
