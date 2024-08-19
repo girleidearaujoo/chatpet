@@ -14,7 +14,7 @@ export default function Login(){
   signInWithEmailAndPassword(auth, Username, Password)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
+    const user = userCredential.user;;
     console.log(user)
     router.replace ('/home')
 
