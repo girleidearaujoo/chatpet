@@ -17,8 +17,8 @@ export default function Login(){
     const user = userCredential.user;;
     console.log(user)
     router.replace ('/home')
-
     // ...
+    
   })
   .catch((error) => {
     const errorCode = error.code;
