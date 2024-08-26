@@ -1,8 +1,8 @@
 import {Button, Text, View, TextInput} from "react-native"
 import {auth} from '../firebaseConfig';
 import {signInWithEmailAndPassword} from "firebase/auth"
-import { useState } from "react";
-import { useRouter } from "expo-router";
+import {useState } from "react";
+import {useRouter } from "expo-router";
 
 export default function Login(){
 
@@ -44,6 +44,7 @@ export default function Login(){
     </View>
     <View style= {{padding:10, fontFamily:"KiwiMaru_400Regular"}}>
     <Button title = "Login" onPress={handleLogin} color={"#A0522D"} />
+    <Button title = "Cadastrar" onPress={() => router.navigate('/cadastro')} color={"#A0522D"} />
     </View>
     </View>
   );
