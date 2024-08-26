@@ -1,4 +1,4 @@
-import {Button, Text, View, TextInput} from "react-native"
+import {Button, Alert, Text, View, TextInput} from "react-native"
 import {auth} from '../firebaseConfig';
 import {signInWithEmailAndPassword} from "firebase/auth"
 import {useState } from "react";
@@ -19,10 +19,16 @@ export default function Login(){
   router.replace ('/home')
   
   } catch (error){
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.error(errorCode)
-    console.error(errorMessage)
+    if(error.code == "auth/invalid-email") {
+      Alert.alert("Erro", "email inválido!!")
+    }
+    if(error.code == "auth/missing-password") {
+      Alert.alert("Erro", "senha inválida!!")
+    }
+    if(error.code == "auth/invalid-credential") {
+      Alert.alert("Erro", "senha não corresponde ao email!!")
+    }
+    console.error(error.message)
   }}
   
 
