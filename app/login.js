@@ -16,7 +16,7 @@ export default function Login(){
   // Signed in 
   const user = userCredential.user;;
   console.log(user)
-  router.replace ('/home')
+  router.replace ('/telaInicial')
   
   } catch (error){
     if(error.code == "auth/invalid-email") {
@@ -41,12 +41,12 @@ export default function Login(){
     <View>
     <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Username: </Text>
     <TextInput value = {Username} onChangeText = {setUsername} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }} placeholder = "Digite seu usuário..." 
-    placeholderTextColor = "#A0522D"/>
+    placeholderTextColor = "#A0522D" autoCapitalize="none"/>
     </View>
     <View>
     <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Password:</Text>
     <TextInput value = {Password} onChangeText = {setPassword} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }}  placeholder = "Digite sua senha..." 
-    placeholderTextColor = "#A0522D" secureTextEntry={true} />
+    placeholderTextColor = "#A0522D" secureTextEntry={true} autoCapitalize="none"/>
     </View>
     <View style= {{padding:10, fontFamily:"KiwiMaru_400Regular"}}>
     <Button title = "Login" onPress={handleLogin} color={"#A0522D"} />

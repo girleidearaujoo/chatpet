@@ -30,20 +30,20 @@ const Cadastro = () => {
         <View>
         <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Username: </Text>
         <TextInput value = {Username} onChangeText = {setUsername} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }} placeholder = "Digite seu usuário..." 
-        placeholderTextColor = "#A0522D"/>
+        placeholderTextColor = "#A0522D" autoCapitalize="none"/>
         </View>
         <View>
         <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Password:</Text>
         <TextInput value = {Password} onChangeText = {setPassword} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }}  placeholder = "Digite sua senha..." 
-        placeholderTextColor = "#A0522D" secureTextEntry={true} />
+        placeholderTextColor = "#A0522D" secureTextEntry={true}  autoCapitalize="none"/>
         </View>
         <View>
         <Text style={{fontFamily: "KiwiMaru_400Regular"}}>Repeat Password:</Text>
         <TextInput value = {repetirSenha} onChangeText = {setRepetirSenha} style = {{borderWidth: 1, borderColor: "#FF8247", fontFamily: "KiwiMaru_400Regular" }}  placeholder = "Repita sua senha..." 
-        placeholderTextColor = "#A0522D" secureTextEntry={true} />
+        placeholderTextColor = "#A0522D" secureTextEntry={true}  autoCapitalize="none"/>
         </View>
         <View style= {{padding:10, fontFamily:"KiwiMaru_400Regular"}}>
-        <Button title = "Cadastrar" onPress={handleCadastrar} color={"#A0522D"} />
+        <Button title = "Cadastrar" onPress={handleCadastrar} color={"#A0522D"}  />
         </View>
         </View>
       );
